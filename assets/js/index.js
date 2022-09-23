@@ -1,5 +1,5 @@
 $(function () {
-    gitUserInfo();
+    getUserInfo();
     $('#logout').on('click', function() {
         layer.confirm('是否退出登陆？', {icon: 3, title:'提示'}, function(index){
             localStorage.removeItem('token');
@@ -10,7 +10,7 @@ $(function () {
     })
 });
 
-function gitUserInfo() {
+function getUserInfo() {
     $.ajax({
         method: 'get',
         url: '/my/userinfo',
